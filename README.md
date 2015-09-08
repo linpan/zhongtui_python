@@ -4,7 +4,7 @@
 在开源中国闲逛时发现了这个项目-众推，是一个以Hadoop分布思想为基础类今日头条的开源项目。虽然该项目将去重过滤、文本分类单独出来，但是我认为这都属于数据处理部分。所以我将整个项目的核心划分为三个部分：分布式爬虫、数据清洗与处理、web工程。分别也对应了数据的采集、处理和展示。该项目没有继续下去，可能是因为这个项目不够吸引人，创意不是很好，但是我认为这个项目是当前所有互联网项目技术架构的通用骨架，而本人也正在恶补分布式、机器学习等知识，也想拿Python写一个项目练手，所以就有这个项目，这个项目还处于资料收集、技术储备阶段，这个阶段会有一系列的demo。
 ## 关于系统架构
 SOA面向服务架构大概是现在架构的通用标准，这种架构的最大优势在于高内聚、低耦合，在UNIX的设计思想中也体现了这一点。SOA在我看来就是模块化，而模块之间的通信则是通过RPC或者消息系统，以我现在的理解，将RPC用在模块内的通信，而消息系统则用在不同模块之间，以下是项目的初略架构图
-<img src="/img/arc_zongtui.jpg" width="70%" height="auto">
+<img src="https://github.com/Penicilluus/zhongtui_python/blob/master/img/arc_zongtui.png" width="70%" height="auto">
 <!--more-->
 ## 分布式爬虫部分
 网络爬虫的基本工作原理： 1）从一个初始URL集合中挑选一个URL，下载该URL对应的页面； 
@@ -22,6 +22,10 @@ SOA面向服务架构大概是现在架构的通用标准，这种架构的最�
 ## web工程部分
 ## 结语
 ## 参考资料
-1.&emsp;[scrapy-redis](https://github.com/darkrho/scrapy-redis)，作者：[廖雪峰](http://www.liaoxuefeng.com/)Redis-based components for scrapy that allows distributed crawling
+1.&emsp;[scrapy-redis](https://github.com/darkrho/scrapy-redis)Redis-based components for scrapy that allows distributed crawling
+
+
 2.&emsp;[如何入门Python爬虫](http://www.zhihu.com/question/20899988)
-2.&emsp;[distribute_crawler](https://github.com/gnemoug/distribute_crawler)使用scrapy,redis, mongodb,graphite实现的一个分布式网络爬虫,底层存储mongodb集群,分布式使用redis实现, 爬虫状态显示使用graphite实现。
+
+
+3.&emsp;[distribute_crawler](https://github.com/gnemoug/distribute_crawler)使用scrapy,redis, mongodb,graphite实现的一个分布式网络爬虫,底层存储mongodb集群,分布式使用redis实现, 爬虫状态显示使用graphite实现。
